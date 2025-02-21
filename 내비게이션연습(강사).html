@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내비게이션 연습</title>
+  <style>
+    /*노말라이즈*/
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /*nav*/
+    nav {
+      width: 100%;
+    }
+
+    .top-menu , nav .bottom-menu {
+      width: 100%;
+      min-width:1200px;/*1200px이하로 줄어들지 않음*/
+      background-color: #666;
+    }
+
+    
+    nav .container{
+      width:1200px;
+      margin:0 auto;/*블럭요소는 margin:auto로 가운데 정렬 합니다*/
+      outline:1px solid red;
+    }
+    /*clearfix hack*/
+    .clear::after{/*가상요소*/
+      content:"";/*내용이 없는 빈요소를 만듬*/
+      display:block;
+      clear:both;
+    }
+    
+    .top-menu ul {
+      float:right;
+    }
+
+    .top-menu li {
+      display:inline-block;
+      color:#fff;
+      padding:10px 40px 10px 0;
+      font-size:18px;
+    }
+
+    /*alt+방향키로 위치 이동*/
+    nav .bottom-menu{
+      background-color:orange;
+    }
+
+    .bottom-menu .logo{
+      font-size:20px;
+      color:#fff;
+      float:left;
+      margin-left:40px;
+      line-height:80px;
+    }
+    .bottom-menu .gnb{
+      float:right;
+      margin-right:40px;
+    }
+    .gnb > li{
+      margin-left:45px;
+      float:left;
+      line-height: 80px;
+      color:#fff;
+      font-size:18px;
+    }
+    </style>
+</head>
+
+<body>
+  <nav>
+    <div class="top-menu">
+      <div class="container clear">
+        <ul class="login">
+          <li><a href="#">login</a></li>
+          <li><a href="#">join us</a></li>
+          <li><a href="#">member</a></li>
+        </ul>
+        <!--<div style="clear: both;"></div>-->
+      </div>
+    </div>
+    <div class="bottom-menu">
+      <div class="container clear">
+        <div class="logo">
+          <a href="#">SHAMMAH</a>
+        </div>
+        <ul class="gnb">
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">PORTPOLIO</a></li>
+          <li><a href="#">BOARD</a></li>
+          <li><a href="#">ALBUM</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>
+
+</html>
