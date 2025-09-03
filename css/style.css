@@ -3,7 +3,9 @@
 *{margin:0; padding:0;}
 ul, li{list-style:none;}
 a{text-decoration: none; color:inherit;}
-body{
+
+html, body{
+  scroll-behavior: smooth;/*부드러운 스크롤 이동*/
   font-family: Georgia, "Nanum Gothic" ;
   font-size:14px;
   color:#111;
@@ -74,6 +76,7 @@ nav li.active{
   color:#fff;
 }
 #banner h1{
+  font-family: "Jalnan";
   font-size:60px;
   font-weight: normal;
 }
@@ -145,7 +148,27 @@ nav li.active{
 }
 #about .member li{
   width:200px;
+  opacity:0;
+  transition: 1s;
 }
+#about .member li:nth-child(1){
+  transform:translateX(-100%);
+}
+#about .member li:nth-child(2){
+  transform:translateY(-100%);
+}
+#about .member li:nth-child(3){
+  transform:translateY(100%);
+}
+#about .member li:nth-child(4){
+  transform:translateX(100%);
+}
+
+#about .member.on li{
+  transform:translate(0,0);
+  opacity:1;
+}
+
 #about .member h3{
   font-size:14px;
   margin:20px 0 5px;
@@ -327,5 +350,6 @@ footer .icon > li{
   color:red;
   font-size:18px;
   font-weight: bold;
+  display:none;/*top버튼을 화면에서 제거*/
 }
 .top i{margin-right:5px;}

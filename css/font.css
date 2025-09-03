@@ -1,0 +1,9 @@
+/*폰트적용*/
+@font-face{/*폰트 링크*/
+  font-family:"Jalnan";/*폰트이름*/
+  /*폰트소스 링크*/
+  src:
+    url(../font/Jalnan2.otf) format("opentype"),
+    url(../font/Jalnan2TTF.ttf) format("truetype"),
+    url(../font/Jalnan2TTF.woff) format("woff");
+}
